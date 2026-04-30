@@ -13,9 +13,11 @@ public class Contador : MonoBehaviour
         txtScore.text = score.ToString();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void AddPointAndUpdateScore(){
+        score ++;
+        txtScore.text = score.ToString();
+        if(score >= 3){
+            txtScore.text = "Ganaste";
+        }
     }
 }
